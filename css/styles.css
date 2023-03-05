@@ -25,8 +25,8 @@ img {
 }
 
 .btn {
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
   border: 0;
   background: transparent;
   color: var(--clr-text);
@@ -61,7 +61,7 @@ img {
   text-transform: uppercase;
   margin: 0;
   line-height: 1;
-  font-size: clamp(3rem, 10vw, 12rem);
+  font-size: clamp(3rem, 10vw, 7rem);
 }
 
 .location {
@@ -102,6 +102,11 @@ nav {
 
 footer {
   margin-top: 2em;
+}
+
+.social-links {
+  display: flex;
+  gap: 2em;
 }
 
 .social-link:hover,
@@ -188,6 +193,17 @@ footer {
   }
 
   footer {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  main::after {
+    grid-column: 3 / 4;
+  }
+
+  .nav,
+  .secondary-images {
     grid-column: 2 / 3;
   }
 }
